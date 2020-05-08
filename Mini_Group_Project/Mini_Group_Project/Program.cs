@@ -12,7 +12,7 @@ namespace Mini_Group_Project
             Console.WriteLine("skdoajhgkoiajsdfgn");
 
 
-
+            Console.WriteLine("I want die");
 
         }
     }
