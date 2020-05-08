@@ -6,7 +6,7 @@ namespace Mini_Group_Project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("This is really hard make brain go ouch");
         }
     }
 }
