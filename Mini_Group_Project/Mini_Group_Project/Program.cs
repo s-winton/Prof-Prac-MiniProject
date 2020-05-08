@@ -9,6 +9,9 @@ namespace Mini_Group_Project
         static void Main(string[] args)
         {
             Random rand = new Random();
+            int strength = 0;
+            int hitpoints = 20;
+            int intelligence = 0;
         }
     }
 }
