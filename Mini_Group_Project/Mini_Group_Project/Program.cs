@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 // William edit test
 
 namespace Mini_Group_Project
@@ -7,8 +8,7 @@ namespace Mini_Group_Project
     {
         static void Main(string[] args)
         {
-            
-
+            Random rand = new Random();
         }
     }
 }
