@@ -6,6 +6,12 @@ namespace Mini_Group_Project
 {
     class Program
     {
+
+        private static int strength = 0;
+        private static int hitpoints = 20;
+        private static int intelligence = 0;
+
+
         public static void Door1()
         {
             Console.WriteLine("");
@@ -31,10 +37,7 @@ namespace Mini_Group_Project
             Random rand = new Random();
             string temp;
             int Starterdoor;
-            int strength = 0;
-            int hitpoints = 20;
-            int intelligence = 0;
-
+            
             Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
             Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
             Console.WriteLine("Door 1?");
