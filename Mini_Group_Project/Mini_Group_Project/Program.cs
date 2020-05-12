@@ -6,12 +6,76 @@ using System.Threading;
 
 namespace Mini_Group_Project
 {
+    public static class Globals
+    {
+        public static int strength = 4;
+        public static int hitpoints = 20;
+        public static int intelligence = 4;
+    }
     class Program
     {
-       
-        private static int strength = 4;
-        private static int hitpoints = 20;
-        private static int intelligence = 4;
+        public static void fight()
+        {
+
+        }
+        public static void flee()
+        {
+
+        }
+        public static void stair2()
+        {
+
+        }
+        public static void wall()
+        {
+
+        }
+        public static void encounter1()
+        {
+            string temp;
+            int choice;
+            Console.WriteLine("You gahter your thoughts as ahead of you at the bottom of the stairs is a dimly lit corridir. Right in front of you you can barely make out a large shadow...");
+            Console.WriteLine("Do you wish to investigate what this mysterious figure could be?");
+            Console.WriteLine("1. Yes, I'm not afriad of anything!");
+            Console.WriteLine("2. Hell no! I'd rahter go back up those stairs and find another way through this!");
+            temp = Console.ReadLine();
+            choice = Convert.ToInt32(temp);
+
+            if (choice == 1)
+            {
+                Console.WriteLine("You approach the large figure....");
+                Thread.Sleep(1000);
+                Console.WriteLine("Gettting closer....");
+                Thread.Sleep(1000);
+                Console.WriteLine("The figure roars and charges at you!");
+                Console.WriteLine("Its an Ogre!");
+                Thread.Sleep(1000);
+
+                Console.WriteLine("Do you wish to fight or flee?");
+                Console.WriteLine("1. I'm getting out of here! (run back up the stairs)");
+                Console.WriteLine("2. I'm too young to die! (make a break for it and run past the ogre)");
+                Console.WriteLine("3. I can take him! (stand your ground and fight!");
+                temp = Console.ReadLine();
+                choice = Convert.ToInt32(temp);
+
+                switch (choice)
+                {
+                    case 1:
+                        stair2();
+                        break;
+                    case 2:
+                        flee();
+                        break;
+                    case 3:
+                        fight();
+                        break;
+                }
+            }
+            else
+            {
+                stair2();
+            }
+        }
 
         public static void Stair1()
         {
@@ -19,8 +83,9 @@ namespace Mini_Group_Project
             string temp;
             int stairs;
             int slip;
+            int damage;
 
-            Console.WriteLine("After you cross the pit, you look ahead to see a stoney, narrow spiral staircase going down. It looks like its wet and covered in slipery mould.");
+            Console.WriteLine("After you cross the pit, you look ahead to see a stoney, narrow spiral staircase going down. It looks like its wet and covered in slippery mold.");
             Console.WriteLine("Will you try to walk down the staircase or follow a different route?");
             Console.WriteLine("1. It's only a staircase, whats the danger?");
             Console.WriteLine("2. No way! It looks way too dangerous, I might slip!");
@@ -35,7 +100,7 @@ namespace Mini_Group_Project
                 for (int i = 0; i < 5; i++)
                 {
                     Console.WriteLine("Slowly down the staris you take a step...");
-                    Thread.Sleep(500);
+                    Thread.Sleep(2000);
                     slip = rand.Next(1, 5);
 
                     if (slip == 1)
@@ -46,18 +111,34 @@ namespace Mini_Group_Project
                         Console.WriteLine("You tumble down the stairs!");
                         Thread.Sleep(500);
                         Console.WriteLine("Ouch!");
-                        Thread.Sleep(200);
+                        Thread.Sleep(800);
                         Console.WriteLine("Ow!");
-                        Thread.Sleep(200);
+                        Thread.Sleep(1000);
                         Console.WriteLine("Agh!");
+                        Thread.Sleep(1000);
+                        Console.Clear();
+                        damage = rand.Next(2, 8);
+                        Globals.hitpoints = Globals.hitpoints - damage;
+
+                        Console.WriteLine("You are bruised and broken after that brutal fall.");
+                        Console.WriteLine("You took " + damage + " hitpoints of damage! You now have " + Globals.hitpoints + " hitpoints remaining!");
+                        Console.ReadLine();
+                        Console.Clear();
+                        encounter1();
+                    }
+                    if (i >5 && slip !=1)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You Safely decended the stairs");
+                        Console.ReadLine();
+                        Console.Clear();
+                        encounter1();
                     }
                 }
-                Console.Clear();
-                Console.WriteLine("You Safely decended the stairs");
             }
             else
             {
-                Console.WriteLine("You decide thats its not worht the hassle and look for another way...");
+                Console.WriteLine("You decide thats its not worth the hassle and look for another way...");
             }
 
         }
@@ -131,7 +212,7 @@ namespace Mini_Group_Project
             {
                 Console.WriteLine("You walk up to the iron door and kick it");
 
-                if (strength <= 5)
+                if (Globals.strength <= 5)
                 {
                     Console.WriteLine("You just broke your foot good job");
                     Console.ReadLine();
@@ -147,7 +228,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("you attempt to open the door using what little magic knowledge you have");
                 Console.ReadLine();
 
-                if (intelligence >= 3)
+                if (Globals.intelligence >= 3)
                 {
                     Console.WriteLine("the door opens turns out idiots can use magic");
                     Console.ReadLine();
@@ -170,7 +251,7 @@ namespace Mini_Group_Project
 
             Console.WriteLine("You open the door with the big three on it");
             Console.WriteLine("You walk into the room and only find a pair of metal boots you put them on, for some reason they make you feel stronger");
-            strength = strength + 2;
+            Globals.strength = Globals.strength + 2;
             Console.ReadLine();
             Main();
         }
