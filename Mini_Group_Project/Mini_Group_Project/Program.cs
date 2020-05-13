@@ -111,7 +111,7 @@ namespace Mini_Group_Project
                     else
                     {
                         damage = rand.Next(0, 2);
-                        Console.WriteLine("you attempt to dodge but still get hit and take " + damage + "damage\n");
+                        Console.WriteLine("you attempt to dodge but still get hit and take " + damage + " damage\n");
                         Globals.hitpoints = Globals.hitpoints - damage;
                     }
                 }
@@ -121,7 +121,7 @@ namespace Mini_Group_Project
                 }
                 
 
-            } while ((ogrehealth! >= 0) || (Globals.hitpoints !>= 0));
+            } while ((ogrehealth !>= 0) || (Globals.hitpoints !>= 0));
 
             if (Globals.hitpoints >= 0)
             {
