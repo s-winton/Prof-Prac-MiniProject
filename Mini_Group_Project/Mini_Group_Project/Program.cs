@@ -8,6 +8,7 @@ namespace Mini_Group_Project
 {
     public static class Globals
     {
+        public static int dexterity = 4;
         public static int strength = 4;
         public static int hitpoints = 20;
         public static int intelligence = 4;
@@ -16,8 +17,155 @@ namespace Mini_Group_Project
     {
         public static void fight()
         {
+            int loot;
+            int damage;
+            string temp;
+            int choice;
+            int ogrehealth = 30;
+            Random rand = new Random();
+
+            Console.WriteLine("The big fat ogre laughs as you go to challenge him");
+            do
+            {
+                Console.WriteLine("what will you do?");
+                Console.WriteLine("1. stab him");
+                Console.WriteLine("2. use fireball");
+                Console.WriteLine("3. dodge");
+                Console.WriteLine("4. check health");
+                temp = Console.ReadLine();
+                choice = Convert.ToInt32(temp);
+
+                if (choice == 1)
+                {
+                    Console.WriteLine("you take a stab at the ogre");
+                    Console.ReadLine();
+
+                    if (Globals.strength >= 5)
+                    {
+                        damage = rand.Next(4, 7);
+                        Console.WriteLine("You deal " + damage + " damage to the ogre\n");
+                        ogrehealth = ogrehealth - damage;
+                        Console.ReadLine();
+
+                        Console.WriteLine("Just as you manage to pull your weapon out of the orge he punches you right in the face\n");
+                        damage = rand.Next(1, 4);
+                        Console.WriteLine("You took " + damage + " damage\n");
+                        Globals.hitpoints = Globals.hitpoints - damage;
+                    }
+                    else
+                    {
+                        damage = rand.Next(1, 5);
+                        Console.WriteLine("You deal " + damage +  "damage to the ogre\n");
+                        ogrehealth = ogrehealth - damage;
+                        Console.ReadLine();
+
+                        Console.WriteLine("Just as you manage to pull your weapon out of the orge he punches you right in the face\n");
+                        damage = rand.Next(1, 4);
+                        Console.WriteLine("You took " + damage + " damage\n");
+                        Globals.hitpoints = Globals.hitpoints - damage;
+                    }
+                }
+                else
+
+                if (choice == 2)
+                {
+                    Console.WriteLine("You prepare to cast a fireball attack");
+                    Console.ReadLine();
+
+                    if (Globals.intelligence >= 5)
+                    {
+                        damage = rand.Next(4, 6);
+                        Console.WriteLine("You hurl a fireball at him dealing " + damage + " damage\n");
+                        ogrehealth = ogrehealth - damage;
+                        Console.ReadLine();
+
+                        Console.WriteLine("The ogre flails around and ends up kicking you across the room\n");
+                        damage = rand.Next(1, 4);
+                        Console.WriteLine("That really hurt you take " + damage + " damage\n");
+                        Globals.hitpoints = Globals.hitpoints - damage;
+                    }
+                    else
+                    {
+                        damage = rand.Next(0, 3);
+                        Console.WriteLine("You hurl a fireball at him dealing " + damage + " damage\n");
+                        ogrehealth = ogrehealth - damage;
+                        Console.ReadLine();
+
+                        Console.WriteLine("The ogre laughs at such a pathetic attack and responds by kicking you\n");
+                        damage = rand.Next(3, 5);
+                        Console.WriteLine("That really hurt you take " + damage + " damage\n");
+                        Globals.hitpoints = Globals.hitpoints - damage;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("You prepare yourself for the ogres attack\n");
+                    Console.ReadLine();
+
+                    if (Globals.dexterity >= 3)
+                    {
+                        Console.WriteLine("you manage to dodge the ogres haymaker\n");
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        damage = rand.Next(0, 2);
+                        Console.WriteLine("you attempt to dodge but still get hit and take " + damage + "damage\n");
+                        Globals.hitpoints = Globals.hitpoints - damage;
+                    }
+                }
+                if (choice == 4)
+                {
+                    Console.WriteLine("you have " + Globals.hitpoints + " health left");
+                }
+                
+
+            } while ((ogrehealth! >= 0) || (Globals.hitpoints !>= 0));
+
+            if (Globals.hitpoints >= 0)
+            {
+                Death();
+            }
+            else
+            {
+                Console.WriteLine("The ogre falls with a great thud");
+                Console.WriteLine("You loot the orge and see that there is a club, and a wizards hat.");
+                Console.WriteLine("what will you take\n");
+                Console.WriteLine("1. The Club");
+                Console.WriteLine("2. The Wizards Hat");               
+                temp = Console.ReadLine();
+                loot = Convert.ToInt32(temp);
+
+                if (loot == 1)
+                {
+                    Console.WriteLine("You take the club, its a nice club");
+                    Console.ReadLine();
+                    Globals.strength = Globals.strength + 2;
+                }
+                else
+                {
+                    Console.WriteLine("You take the wizards hat, when you put it on you feel smarter");
+                    Console.ReadLine();
+                    Globals.intelligence = Globals.intelligence + 3;
+                }
+                
+                
+            }
+
 
         }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         public static void flee()
         {
 
@@ -54,7 +202,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("Do you wish to fight or flee?");
                 Console.WriteLine("1. I'm getting out of here! (run back up the stairs)");
                 Console.WriteLine("2. I'm too young to die! (make a break for it and run past the ogre)");
-                Console.WriteLine("3. I can take him! (stand your ground and fight!");
+                Console.WriteLine("3. I can take him! (stand your ground and fight!)");
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
 
@@ -252,6 +400,7 @@ namespace Mini_Group_Project
             Console.WriteLine("You open the door with the big three on it");
             Console.WriteLine("You walk into the room and only find a pair of metal boots you put them on, for some reason they make you feel stronger");
             Globals.strength = Globals.strength + 2;
+            Globals.dexterity = Globals.dexterity - 2;
             Console.ReadLine();
             Main();
         }
