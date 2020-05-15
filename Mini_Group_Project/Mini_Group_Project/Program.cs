@@ -265,6 +265,43 @@ namespace Mini_Group_Project
         }
         public static void stair2()
         {
+            Console.WriteLine("You flee back towards the spiral staircase you came down.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
         public static void wall()
