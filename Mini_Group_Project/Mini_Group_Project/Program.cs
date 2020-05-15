@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-// William edit test
+
 
 namespace Mini_Group_Project
 {
@@ -260,7 +260,20 @@ namespace Mini_Group_Project
         }
         public static void wall()
         {
+            string temp;
+            Console.WriteLine("You notice a wall shimmering slightly with strange magic");
+            Console.WriteLine("Will you inspect it?");
+            temp = Console.ReadLine();
+            if (temp == yes) ;
+            {
+                Console.WriteLine("The wall appears to be an illusion");
+                Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway");
+            }
             
+            else
+            {
+                Console.WriteLine("You carry on with your adventure");
+            }
 
 
 
@@ -282,12 +295,7 @@ namespace Mini_Group_Project
 
 
 
-
-
-
-
-
-        
+        //298
         }
         public static void encounter1()
         {
