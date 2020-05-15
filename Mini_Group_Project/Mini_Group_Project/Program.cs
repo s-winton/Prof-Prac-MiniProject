@@ -261,6 +261,7 @@ namespace Mini_Group_Project
         }
         public static void stair2()
         {
+
         }
         public static void wall()
         {
