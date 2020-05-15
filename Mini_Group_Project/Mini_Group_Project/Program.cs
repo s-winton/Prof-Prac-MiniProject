@@ -264,27 +264,29 @@ namespace Mini_Group_Project
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
-            if (temp == yes) ;
+            if (temp == yes)
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
-                Console.WriteLine("Would you like to ");
+                Console.WriteLine("Would you like to take the staff?");
+                temp = Console.ReadLine();
+                if (temp == yes)
+                {
+                    Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
+                }
+                else
+                {
+                    Console.WriteLine("Best not to run around touching things that aren't yours.");
+                    Console.WriteLine("you leave the room.");
+
+                }
             }
             else
             {
-                Console.WriteLine("You carry on with your adventure");
+                Console.WriteLine("Could be dangerous, best not to meddle.");
+                Console.WriteLine("You carry on with your adventure.");
+
             }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
