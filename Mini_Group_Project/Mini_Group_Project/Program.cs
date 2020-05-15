@@ -204,21 +204,23 @@ namespace Mini_Group_Project
             int dodge;
             Random rand = new Random();
 
+            Console.WriteLine("The Ogre Shouts " + "This is the part where you run away!");
+            Thread.Sleep(1000);
             Console.WriteLine("You gather all fo your courage and start to make a break for it...");
             Thread.Sleep(1000);
             Console.WriteLine("You start sprinting as fast as you can....");
             Thread.Sleep(1000);
-            Console.WriteLine("As you approach the Ogre, you think to yourself ","This was a really bad idea! The Ogre is so tall!");
+            Console.WriteLine("As you approach the Ogre, you think to yourself ","This was a really bad idea! The Ogre is so tall! I think I can just get past... (dexerity " + Globals.dexterity + ")");
 
             if (Globals.dexterity > 2)
             {
                 dodge = rand.Next(1, 101);
-                Console.WriteLine("The Ogre takes a massive swting at you! You attempt to dodge!");
+                Console.WriteLine("\nThe Ogre takes a massive swting at you! You attempt to dodge!");
                 Thread.Sleep(2000);
 
                 if (dodge <= 60)
                 {
-                    Console.WriteLine("You leap in the air as the Ogre's club sweeps under you, you mamange to avoid the hit by mere inches!");
+                    Console.WriteLine("\nYou leap in the air as the Ogre's club sweeps under you, you mamange to avoid the hit by mere inches!");
                     Thread.Sleep(500);
                     Console.WriteLine("phew, that was close!");
 
@@ -226,6 +228,8 @@ namespace Mini_Group_Project
                     {
                         Console.WriteLine("You leap in the air as the Orgre swings it's club at you...");
                         Thread.Sleep(1000);
+                        Console.WriteLine("The Ogre's club hits you!");
+                        Thread.Sleep(200);
                     }
                 }
             }
