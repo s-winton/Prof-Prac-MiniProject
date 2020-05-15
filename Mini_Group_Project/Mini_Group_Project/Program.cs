@@ -268,11 +268,10 @@ namespace Mini_Group_Project
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
-<<<<<<< HEAD
+
             if (temp == yes) 
-=======
-            if (temp == yes)
->>>>>>> 1f09255fb924444224568d0304c14bc46bad0d2c
+
+
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
@@ -303,7 +302,7 @@ namespace Mini_Group_Project
 
 
 
-        //298
+        
         }
         public static void encounter1()
         {
