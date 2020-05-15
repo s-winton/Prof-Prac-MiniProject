@@ -237,67 +237,33 @@ namespace Mini_Group_Project
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         public static void stair2()
         {
+            Random rand = new Random();
+            string temp;
+            int slip;
             Console.WriteLine("You flee back towards the spiral staircase you came down.");
+            Console.WriteLine("You hear the Ogre lumbering behind you as try to flee up the stairs.");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("You hastily clamber up the stairs. Trying your best to keep your grip on the mossy steps.");
+                slip = rand.Next(1, 8);
+                if (slip == 1)
+                {
+                    Console.WriteLine("You lose your grip on the slimy steps, falling to the ground and sliding back down the stairs.");
+                    Console.WriteLine("The Ogre has caught you. It will surely shave your liver and squeeze the jelly from your eyes.");
+                    Death();
+                }
+                else
+                {
+                    Console.WriteLine("You climb you way back up the stairs, escaping the Ogre.");
+                    Stair1();
+                }
+            }
 
 
 
