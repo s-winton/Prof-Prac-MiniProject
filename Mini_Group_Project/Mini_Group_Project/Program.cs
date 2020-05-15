@@ -206,12 +206,13 @@ namespace Mini_Group_Project
 
             Console.WriteLine("The Ogre Shouts " + "This is the part where you run away!");
             Thread.Sleep(1000);
-            Console.WriteLine("You gather all fo your courage and start to make a break for it...");
+            Console.WriteLine("You gather all of your courage and start to make a break for it...");
             Thread.Sleep(1000);
             Console.WriteLine("You start sprinting as fast as you can....");
             Thread.Sleep(1000);
             Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall! I think I can just get past... (dexerity " + Globals.dexterity + ")");
             Console.Clear();
+            Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall!");
 
             if (Globals.dexterity > 2)
             {
@@ -309,14 +310,12 @@ namespace Mini_Group_Project
             temp = Console.ReadLine();
 
             if (temp == yes)
-
-
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
                 Console.WriteLine("Would you like to take the staff?");
                 temp = Console.ReadLine();
-                if (temp == yes)
+                if (temp == "yes")
                 {
                     Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
                 }
@@ -619,3 +618,4 @@ namespace Mini_Group_Project
         }
     }
 }
+

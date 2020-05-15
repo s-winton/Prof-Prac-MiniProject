@@ -2,10 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    console.WriteLine(); 
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    
   </PropertyGroup>
-  
-</Project>
 
+</Project>
