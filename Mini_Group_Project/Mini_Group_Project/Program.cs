@@ -50,16 +50,16 @@ namespace Mini_Group_Project
                 Globals.hitpoints = Globals.hitpoints - damage;
             }
         }
-        
-        
-        
-        
-        
+
+
+
+
+
         public static void dodge()
         {
             Random rand = new Random();
             int damage;
-            
+
             Console.WriteLine("You prepare yourself for the ogres attack\n");
             Console.ReadLine();
 
@@ -75,12 +75,12 @@ namespace Mini_Group_Project
                 Globals.hitpoints = Globals.hitpoints - damage;
             }
         }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         public static void stab()
         {
             Random rand = new Random();
@@ -118,11 +118,11 @@ namespace Mini_Group_Project
 
 
         }
-        
-                                       
+
+
         public static void fight()
         {
-            int loot;            
+            int loot;
             string temp;
             int choice;
             int ogrehealth = 30;
@@ -154,8 +154,8 @@ namespace Mini_Group_Project
                         dodge();
                         break;
                 }
-                                                   
-            } while ((ogrehealth !>= 0) || (Globals.hitpoints !>= 0));
+
+            } while ((ogrehealth! >= 0) || (Globals.hitpoints! >= 0));
 
             if (ogrehealth >= 0)
             {
@@ -182,22 +182,22 @@ namespace Mini_Group_Project
             }
             else
             {
-                Death();                                          
+                Death();
             }
 
 
         }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
         public static void flee()
         {
             string temp;
@@ -208,7 +208,7 @@ namespace Mini_Group_Project
             Thread.Sleep(1000);
             Console.WriteLine("You start sprinting as fast as you can....");
             Thread.Sleep(1000);
-            Console.WriteLine("As you approach the Ogre, you think to yourself ","This was a really bad idea! The Ogre is so tall!");
+            Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall!");
 
             if (Globals.dexterity > 2)
             {
@@ -261,6 +261,7 @@ namespace Mini_Group_Project
         }
         public static void stair2()
         {
+
         }
         public static void wall()
         {
@@ -269,7 +270,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
 
-            if (temp == yes) 
+            if (temp == "yes")
 
 
             {
@@ -277,7 +278,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
                 Console.WriteLine("Would you like to take the staff?");
                 temp = Console.ReadLine();
-                if (temp == yes)
+                if (temp == "yes")
                 {
                     Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
                 }
@@ -302,7 +303,7 @@ namespace Mini_Group_Project
 
 
 
-        
+
         }
         public static void encounter1()
         {
@@ -400,7 +401,7 @@ namespace Mini_Group_Project
                         Console.Clear();
                         encounter1();
                     }
-                    if (i >5 && slip !=1)
+                    if (i > 5 && slip != 1)
                     {
                         Console.Clear();
                         Console.WriteLine("You Safely decended the stairs");
@@ -416,7 +417,7 @@ namespace Mini_Group_Project
             }
 
         }
-                           
+
         public static void Door1()
         {
             Random rand = new Random();
@@ -462,11 +463,11 @@ namespace Mini_Group_Project
         }
 
 
-        
-        
-        
-        
-        
+
+
+
+
+
         public static void Door2()
         {
             string temp;
@@ -554,7 +555,7 @@ namespace Mini_Group_Project
 
             Console.Clear();
 
-            Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");            
+            Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
             Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
             Console.WriteLine("Door 1?");
             Console.WriteLine("Door 2?");
@@ -575,8 +576,9 @@ namespace Mini_Group_Project
                 case 3:
                     Door3();
                     break;
-                
+
             }
         }
     }
 }
+
