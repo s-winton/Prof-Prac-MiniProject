@@ -200,6 +200,36 @@ namespace Mini_Group_Project
         
         public static void flee()
         {
+            string temp;
+            int dodge;
+            Random rand = new Random();
+
+            Console.WriteLine("You gather all fo your courage and start to make a break for it...");
+            Thread.Sleep(1000);
+            Console.WriteLine("You start sprinting as fast as you can....");
+            Thread.Sleep(1000);
+            Console.WriteLine("As you approach the Ogre, you think to yourself ","This was a really bad idea! The Ogre is so tall!");
+
+            if (Globals.dexterity > 2)
+            {
+                dodge = rand.Next(1, 101);
+                Console.WriteLine("The Ogre takes a massive swting at you! You attempt to dodge!");
+                Thread.Sleep(2000);
+
+                if (dodge <= 60)
+                {
+                    Console.WriteLine("You leap in the air as the Ogre's club sweeps under you, you mamange to avoid the hit by mere inches!");
+                    Thread.Sleep(500);
+                    Console.WriteLine("phew, that was close!");
+
+                    if (dodge > 60)
+                    {
+                        Console.WriteLine("You leap in the air as the Orgre swings it's club at you...");
+                        Thread.Sleep(1000);
+                    }
+                }
+            }
+
 
 
 
@@ -264,12 +294,11 @@ namespace Mini_Group_Project
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
-            if (temp == yes) ;
+            if (temp == yes) 
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway");
             }
-            
             else
             {
                 Console.WriteLine("You carry on with your adventure");
