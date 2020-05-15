@@ -267,15 +267,13 @@ namespace Mini_Group_Project
             if (temp == yes) ;
             {
                 Console.WriteLine("The wall appears to be an illusion");
-                Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway");
+                Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
+                Console.WriteLine("Would you like to ");
             }
-            
             else
             {
                 Console.WriteLine("You carry on with your adventure");
             }
-
-
 
 
 
