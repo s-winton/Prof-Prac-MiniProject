@@ -261,32 +261,6 @@ namespace Mini_Group_Project
         }
         public static void stair2()
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         public static void wall()
         {
@@ -294,28 +268,33 @@ namespace Mini_Group_Project
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
+<<<<<<< HEAD
             if (temp == yes) 
+=======
+            if (temp == yes)
+>>>>>>> 1f09255fb924444224568d0304c14bc46bad0d2c
             {
                 Console.WriteLine("The wall appears to be an illusion");
-                Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway");
+                Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
+                Console.WriteLine("Would you like to take the staff?");
+                temp = Console.ReadLine();
+                if (temp == yes)
+                {
+                    Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
+                }
+                else
+                {
+                    Console.WriteLine("Best not to run around touching things that aren't yours.");
+                    Console.WriteLine("you leave the room.");
+
+                }
             }
             else
             {
-                Console.WriteLine("You carry on with your adventure");
+                Console.WriteLine("Could be dangerous, best not to meddle.");
+                Console.WriteLine("You carry on with your adventure.");
+
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -330,10 +309,10 @@ namespace Mini_Group_Project
         {
             string temp;
             int choice;
-            Console.WriteLine("You gahter your thoughts as ahead of you at the bottom of the stairs is a dimly lit corridir. Right in front of you you can barely make out a large shadow...");
+            Console.WriteLine("You gather your thoughts as ahead of you at the bottom of the stairs is a dimly lit corridoor. Right in front of you you can barely make out a large shadow...");
             Console.WriteLine("Do you wish to investigate what this mysterious figure could be?");
             Console.WriteLine("1. Yes, I'm not afriad of anything!");
-            Console.WriteLine("2. Hell no! I'd rahter go back up those stairs and find another way through this!");
+            Console.WriteLine("2. Hell no! I'd rather go back up those stairs and find another way through this!");
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -381,7 +360,7 @@ namespace Mini_Group_Project
             int slip;
             int damage;
 
-            Console.WriteLine("After you cross the pit, you look ahead to see a stoney, narrow spiral staircase going down. It looks like its wet and covered in slippery mold.");
+            Console.WriteLine("After you cross the pit, you look ahead to see a stoney, narrow spiral staircase going down. It looks wet and is covered in slippery moss.");
             Console.WriteLine("Will you try to walk down the staircase or follow a different route?");
             Console.WriteLine("1. It's only a staircase, whats the danger?");
             Console.WriteLine("2. No way! It looks way too dangerous, I might slip!");
@@ -395,7 +374,7 @@ namespace Mini_Group_Project
 
                 for (int i = 0; i < 5; i++)
                 {
-                    Console.WriteLine("Slowly down the staris you take a step...");
+                    Console.WriteLine("Slowly down the stairs you take a step...");
                     Thread.Sleep(2000);
                     slip = rand.Next(1, 5);
 
@@ -448,7 +427,7 @@ namespace Mini_Group_Project
 
             Console.Clear();
 
-            Console.WriteLine("You open the door with the big one on it, as you open the door you start to smell a foul stench.");
+            Console.WriteLine("You open the door with the big one on it, as you open the door you smell a foul stench.");
             Console.WriteLine("You walk into the room and notice a pit in the middle of the room and the stench is coming from the bottom. The only way across is the pillars that are spread out across the pit");
             Console.WriteLine("will you try to cross or go back?");
             Console.WriteLine("1. cross");
@@ -476,7 +455,7 @@ namespace Mini_Group_Project
             }
             else
             {
-                Console.WriteLine("You turn around finding yourself to affraid and go back into the first room");
+                Console.WriteLine("You turn around finding yourself to afraid and go back into the first room");
                 Console.ReadLine();
                 Main();
             }
