@@ -219,20 +219,20 @@ namespace Mini_Group_Project
             if (Globals.dexterity > 2)
             {
                 dodge = rand.Next(1, 101);
-                Console.WriteLine("\nThe Ogre takes a massive swting at you! You attempt to dodge!");
+                Console.WriteLine("\nThe Ogre takes a massive swing at you! You attempt to dodge!");
                 Thread.Sleep(2000);
 
                 if (dodge <= 60)
                 {
-                    Console.WriteLine("\nYou leap in the air as the Ogre's club sweeps under you, you mamange to avoid the hit by mere inches!");
+                    Console.WriteLine("\nYou leap in the air as the Ogre's club sweeps under you, you manage to avoid the hit by mere inches!");
                     Thread.Sleep(500);
-                    Console.WriteLine("phew, that was close!");
+                    Console.WriteLine("Phew, that was close!");
                     Thread.Sleep(2000);
                     Console.WriteLine("The Ogre raises its club for another strike!");
                 }
                 else
                 {
-                    Console.WriteLine("\nYou leap in the air as the Orgre swings it's club at you...");
+                    Console.WriteLine("\nYou leap in the air as the Ogre swings it's club at you...");
                     Thread.Sleep(1000);
                     Console.WriteLine("The Ogre's club hits you!");
                     Thread.Sleep(200);
@@ -256,13 +256,13 @@ namespace Mini_Group_Project
                 {
                     Console.WriteLine("The Ogre smashes it's club downwards!");
                     Thread.Sleep(1000);
-                    Console.WriteLine("The club makes a loud crackas it stikes your head!");
+                    Console.WriteLine("The club makes a loud cracks it stikes your head!");
                     Thread.Sleep(5000);
                     Console.WriteLine("... The World around you....  Vision... fading...");
                     Thread.Sleep(7000);
                     Console.WriteLine("You collapse to the flooor, unable to move or cry....");
                     Thread.Sleep(3000);
-                    Console.WriteLine("The Orgre approaces you, and whispers into your ear... ");
+                    Console.WriteLine("The Ogre approaces you, and whispers into your ear... ");
                     Thread.Sleep(1000);
                     Console.WriteLine("..." + "Its all Ogre now");
                     Death();
@@ -380,7 +380,7 @@ namespace Mini_Group_Project
             {
                 Console.WriteLine("You approach the large figure....");
                 Thread.Sleep(1000);
-                Console.WriteLine("Gettting closer....");
+                Console.WriteLine("Getting closer....");
                 Thread.Sleep(1000);
                 Console.WriteLine("The figure roars and charges at you!");
                 Console.WriteLine("Its an Ogre!");
