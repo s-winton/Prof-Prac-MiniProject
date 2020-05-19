@@ -21,7 +21,7 @@ namespace Mini_Group_Project
         {
             Random rand = new Random();
             int damage;
-            
+
 
             Console.WriteLine("You prepare to cast a fireball attack");
             Console.ReadLine();
@@ -86,7 +86,7 @@ namespace Mini_Group_Project
         {
             Random rand = new Random();
             int damage;
-            
+
 
             Console.WriteLine("you take a stab at the ogre");
             Console.ReadLine();
@@ -126,7 +126,7 @@ namespace Mini_Group_Project
             int loot;
             string temp;
             int choice;
-            
+
             Random rand = new Random();
 
             Console.WriteLine("The big fat ogre laughs as you go to challenge him");
@@ -157,7 +157,7 @@ namespace Mini_Group_Project
                         break;
                 }
 
-            } while ((Globals.ogrehealth! >= 0)||(Globals.hitpoints! >= 0));
+            } while ((Globals.ogrehealth! >= 0) || (Globals.hitpoints! >= 0));
 
             if (Globals.ogrehealth >= 0)
             {
@@ -275,7 +275,7 @@ namespace Mini_Group_Project
 
 
 
-        
+
         public static void stair2()
         {
             Random rand = new Random();
@@ -285,7 +285,7 @@ namespace Mini_Group_Project
             Console.WriteLine("You hear the Ogre lumbering behind you as try to flee up the stairs.");
 
 
-            
+
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("You hastily clamber up the stairs. Trying your best to keep your grip on the mossy steps.");
@@ -523,9 +523,54 @@ namespace Mini_Group_Project
         }
 
 
+        public static void armoury()
+        {
+            string temp;
+            int choice;
 
+            Console.Clear();
 
+            Console.WriteLine("As you proceed through past the iron door, you find yourself in a room littered with rusted blades and battered armour.");
+            Console.WriteLine("Would you like to investigate the room?");
+            Console.WriteLine("1: Yes");
+            Console.WriteLine("2: No");
+            
+            temp = Console.ReadLine();
+            choice = Convert.ToInt32(temp);
 
+            if (choice == 1)
+            {
+                Console.Clear();
+
+                Console.WriteLine("As you sift through the piles you find a pair of silk handwraps that look suspiciously clean");
+                Console.WriteLine("would you like to pick them up?");
+                Console.WriteLine("1: Yes");
+                Console.WriteLine("2: No");
+
+                temp = Console.ReadLine();
+                choice = Convert.ToInt32(temp);
+                
+                if (choice == 1)
+                {
+                    Console.WriteLine("As you slip you hands into the soft, smooth wraps. Your body feels lighter.");
+                    Globals.dexterity = Globals.dexterity + 3;
+                    Console.WriteLine("Feeling as though you have found all of worth here, you leave the room.");
+                    Crossroads();
+                }
+                
+                else
+                {
+                    Console.WriteLine("You decide that everything would be rusted beyond purpose and leave.");
+                    Crossroads();
+                }
+            }
+            
+            else
+            {
+                Console.WriteLine("You decide that everything would be rusted beyond purpose and leave.");
+                Crossroads();
+            }
+        }
 
 
         public static void Door2()
@@ -556,7 +601,9 @@ namespace Mini_Group_Project
                 {
                     Console.WriteLine("The door flies open with your mighty kick allowing you into the next room");
                     Console.ReadLine();
+                    armoury();
                 }
+                Door2();
             }
             else
             {
@@ -603,7 +650,37 @@ namespace Mini_Group_Project
             Console.ReadLine();
         }
 
+        public static void Crossroads()
+        {
+            string temp;
+            int door;
+            
+            Console.Clear();
 
+            Console.WriteLine("You return to the room with three numbered doors you woke up in");
+            Console.WriteLine("What door do you go through?");
+            Console.WriteLine("Door 1?");
+            Console.WriteLine("Door 2?");
+            Console.WriteLine("Door 3?");
+            temp = Console.ReadLine();
+            door = Convert.ToInt32(temp);
+
+            switch (door)
+            {
+                case 1:
+                    Door1();
+                    break;
+
+                case 2:
+                    Door2();
+                    break;
+
+                case 3:
+                    Door3();
+                    break;
+
+            }
+        }
 
 
 
