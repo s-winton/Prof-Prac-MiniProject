@@ -309,20 +309,27 @@ namespace Mini_Group_Project
         }
         public static void wall()
         {
-            char yes;
+            int staff;
+            int yes;
             string temp;
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
+            Console.WriteLine("1. Yes");
+            Console.WriteLine("2. No");
             temp = Console.ReadLine();
-            yes = Convert.ToChar(temp);
+            yes = Convert.ToInt32(temp);
 
-            if (temp = yes)
+            if (yes == 1)
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
                 Console.WriteLine("Would you like to take the staff?");
+                Console.WriteLine("1. Yes");
+                Console.WriteLine("2. No");
                 temp = Console.ReadLine();
-                if (temp == "yes")
+                staff = Convert.ToInt32(temp);
+
+                if (staff == 1)
                 {
                     Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
                 }
@@ -337,7 +344,6 @@ namespace Mini_Group_Project
             {
                 Console.WriteLine("Could be dangerous, best not to meddle.");
                 Console.WriteLine("You carry on with your adventure.");
-
             }
 
 
