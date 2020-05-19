@@ -451,10 +451,10 @@ namespace Mini_Group_Project
                         Console.Clear();
                         encounter1();
                     }
-                    if (i > 5 && slip != 1)
+                    else
                     {
                         Console.Clear();
-                        Console.WriteLine("You Safely decended the stairs");
+                        Console.WriteLine("\nYou Safely decended the stairs");
                         Console.ReadLine();
                         Console.Clear();
                         encounter1();
