@@ -273,7 +273,7 @@ namespace Mini_Group_Project
 
 
 
-        }
+        
         public static void stair2()
         {
             Random rand = new Random();
@@ -309,12 +309,14 @@ namespace Mini_Group_Project
         }
         public static void wall()
         {
+            char yes;
             string temp;
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             temp = Console.ReadLine();
+            yes = Convert.ToChar(temp);
 
-            if (temp == yes)
+            if (temp = yes)
             {
                 Console.WriteLine("The wall appears to be an illusion");
                 Console.WriteLine("As you proceed through the illusion. It disperses, leaving you standing in an open doorway leading to a room with a solitary staff standing in the centre");
@@ -623,4 +625,5 @@ namespace Mini_Group_Project
         }
     }
 }
+
 
