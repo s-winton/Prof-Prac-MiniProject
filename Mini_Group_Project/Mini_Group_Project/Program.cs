@@ -8,6 +8,7 @@ namespace Mini_Group_Project
 {
     public static class Globals
     {
+        public static int ogrehealth = 15;
         public static int dexterity = 4;
         public static int strength = 4;
         public static int hitpoints = 20;
@@ -20,7 +21,7 @@ namespace Mini_Group_Project
         {
             Random rand = new Random();
             int damage;
-            int ogrehealth = 30;
+            
 
             Console.WriteLine("You prepare to cast a fireball attack");
             Console.ReadLine();
@@ -29,7 +30,7 @@ namespace Mini_Group_Project
             {
                 damage = rand.Next(4, 6);
                 Console.WriteLine("You hurl a fireball at him dealing " + damage + " damage\n");
-                ogrehealth = ogrehealth - damage;
+                Globals.ogrehealth = Globals.ogrehealth - damage;
                 Console.ReadLine();
 
                 Console.WriteLine("The ogre flails around and ends up kicking you across the room\n");
@@ -41,7 +42,7 @@ namespace Mini_Group_Project
             {
                 damage = rand.Next(0, 3);
                 Console.WriteLine("You hurl a fireball at him dealing " + damage + " damage\n");
-                ogrehealth = ogrehealth - damage;
+                Globals.ogrehealth = Globals.ogrehealth - damage;
                 Console.ReadLine();
 
                 Console.WriteLine("The ogre laughs at such a pathetic attack and responds by kicking you\n");
@@ -85,7 +86,7 @@ namespace Mini_Group_Project
         {
             Random rand = new Random();
             int damage;
-            int ogrehealth = 30;
+            
 
             Console.WriteLine("you take a stab at the ogre");
             Console.ReadLine();
@@ -95,7 +96,7 @@ namespace Mini_Group_Project
 
                 damage = rand.Next(4, 7);
                 Console.WriteLine("You deal " + damage + " damage to the ogre\n");
-                ogrehealth = ogrehealth - damage;
+                Globals.ogrehealth = Globals.ogrehealth - damage;
                 Console.ReadLine();
 
                 Console.WriteLine("Just as you manage to pull your weapon out of the orge he punches you right in the face\n");
@@ -107,7 +108,7 @@ namespace Mini_Group_Project
             {
                 damage = rand.Next(1, 5);
                 Console.WriteLine("You deal " + damage + "damage to the ogre\n");
-                ogrehealth = ogrehealth - damage;
+                Globals.ogrehealth = Globals.ogrehealth - damage;
                 Console.ReadLine();
 
                 Console.WriteLine("Just as you manage to pull your weapon out of the orge he punches you right in the face\n");
@@ -125,13 +126,14 @@ namespace Mini_Group_Project
             int loot;
             string temp;
             int choice;
-            int ogrehealth = 30;
+            
             Random rand = new Random();
 
             Console.WriteLine("The big fat ogre laughs as you go to challenge him");
             do
             {
-                Console.WriteLine("You have " + Globals.hitpoints + " left");
+                Console.WriteLine("You have " + Globals.hitpoints + " health");
+                Console.WriteLine("The ogre has " + Globals.ogrehealth + " Health");
                 Console.WriteLine("what will you do?");
                 Console.WriteLine("1. stab him");
                 Console.WriteLine("2. use fireball");
@@ -155,9 +157,9 @@ namespace Mini_Group_Project
                         break;
                 }
 
-            } while ((ogrehealth! >= 0) || (Globals.hitpoints! >= 0));
+            } while ((Globals.ogrehealth! >= 0)||(Globals.hitpoints! >= 0));
 
-            if (ogrehealth >= 0)
+            if (Globals.ogrehealth >= 0)
             {
                 Console.WriteLine("The ogre falls with a great thud");
                 Console.WriteLine("You loot the orge and see that there is a club, and a wizards hat.");
@@ -312,6 +314,9 @@ namespace Mini_Group_Project
             int staff;
             int yes;
             string temp;
+
+            Console.Clear();
+
             Console.WriteLine("You notice a wall shimmering slightly with strange magic");
             Console.WriteLine("Will you inspect it?");
             Console.WriteLine("1. Yes");
@@ -332,18 +337,23 @@ namespace Mini_Group_Project
                 if (staff == 1)
                 {
                     Console.WriteLine("you have gained a magic staff. Who knows what power it may hold.");
+                    Globals.intelligence = Globals.intelligence + 3;
+                    Console.WriteLine("You walk back to the first room you were in");
+                    Console.ReadLine();
+                    Main();
                 }
                 else
                 {
                     Console.WriteLine("Best not to run around touching things that aren't yours.");
                     Console.WriteLine("you leave the room.");
-
+                    Door2();
                 }
             }
             else
             {
                 Console.WriteLine("Could be dangerous, best not to meddle.");
                 Console.WriteLine("You carry on with your adventure.");
+                Main();
             }
 
 
@@ -490,7 +500,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("You attempted to cross the pit");
                 jump = rand.Next(1, 20);
 
-                if (jump > 10)
+                if (jump > 1)
                 {
                     Console.WriteLine("You made it over the pit good job");
                     Console.ReadLine();
@@ -557,6 +567,7 @@ namespace Mini_Group_Project
                 {
                     Console.WriteLine("the door opens turns out idiots can use magic");
                     Console.ReadLine();
+                    wall();
                 }
             }
 
