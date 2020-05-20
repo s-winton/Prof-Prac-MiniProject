@@ -87,7 +87,6 @@ namespace Mini_Group_Project
             Random rand = new Random();
             int damage;
 
-
             Console.WriteLine("you take a stab at the ogre");
             Console.ReadLine();
 
@@ -116,8 +115,6 @@ namespace Mini_Group_Project
                 Console.WriteLine("You took " + damage + " damage\n");
                 Globals.hitpoints = Globals.hitpoints - damage;
             }
-
-
         }
 
 
@@ -139,6 +136,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("2. use fireball");
                 Console.WriteLine("3. dodge");
                 Console.WriteLine("4. check health");
+                Console.Write("> ");
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
 
@@ -166,6 +164,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("what will you take\n");
                 Console.WriteLine("1. The Club");
                 Console.WriteLine("2. The Wizards Hat");
+                Console.Write("> ");
                 temp = Console.ReadLine();
                 loot = Convert.ToInt32(temp);
 
@@ -186,23 +185,12 @@ namespace Mini_Group_Project
             {
                 Death();
             }
-
-
         }
-
-
-
-
-
-
-
-
 
 
 
         public static void flee()
         {
-            string temp;
             int dodge;
             Random rand = new Random();
 
@@ -250,7 +238,6 @@ namespace Mini_Group_Project
                     Console.WriteLine("The Ogre smashes it's club downwards!");
                     Thread.Sleep(1000);
                     Console.WriteLine("You leap foward just in time, narrowly missing the attack!");
-
                 }
                 else
                 {
@@ -274,17 +261,12 @@ namespace Mini_Group_Project
 
 
 
-
-
         public static void stair2()
         {
             Random rand = new Random();
-            string temp;
             int slip;
             Console.WriteLine("You flee back towards the spiral staircase you came down.");
             Console.WriteLine("You hear the Ogre lumbering behind you as try to flee up the stairs.");
-
-
 
             for (int i = 0; i < 5; i++)
             {
@@ -302,13 +284,10 @@ namespace Mini_Group_Project
                     Stair1();
                 }
             }
-
-
-
-
-
-
         }
+
+
+
         public static void wall()
         {
             int staff;
@@ -321,6 +300,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Will you inspect it?");
             Console.WriteLine("1. Yes");
             Console.WriteLine("2. No");
+            Console.Write("> ");
             temp = Console.ReadLine();
             yes = Convert.ToInt32(temp);
 
@@ -331,6 +311,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("Would you like to take the staff?");
                 Console.WriteLine("1. Yes");
                 Console.WriteLine("2. No");
+                Console.Write("> ");
                 temp = Console.ReadLine();
                 staff = Convert.ToInt32(temp);
 
@@ -355,15 +336,6 @@ namespace Mini_Group_Project
                 Console.WriteLine("You carry on with your adventure.");
                 Main();
             }
-
-
-
-
-
-
-
-
-
         }
         public static void encounter1()
         {
@@ -373,6 +345,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Do you wish to investigate what this mysterious figure could be?");
             Console.WriteLine("1. Yes, I'm not afriad of anything!");
             Console.WriteLine("2. Hell no! I'd rather go back up those stairs and find another way through this!");
+            Console.Write("> ");
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -390,6 +363,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("1. I'm getting out of here! (run back up the stairs)");
                 Console.WriteLine("2. I'm too young to die! (make a break for it and run past the ogre)");
                 Console.WriteLine("3. I can take him! (stand your ground and fight!)");
+                Console.Write("> ");
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
 
@@ -412,6 +386,7 @@ namespace Mini_Group_Project
             }
         }
 
+
         public static void Stair1()
         {
             Random rand = new Random();
@@ -424,6 +399,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Will you try to walk down the staircase or follow a different route?");
             Console.WriteLine("1. It's only a staircase, whats the danger?");
             Console.WriteLine("2. No way! It looks way too dangerous, I might slip!");
+            Console.Write("> ");
             temp = Console.ReadLine();
             stairs = Convert.ToInt32(temp);
 
@@ -478,6 +454,7 @@ namespace Mini_Group_Project
 
         }
 
+
         public static void Door1()
         {
             Random rand = new Random();
@@ -492,6 +469,7 @@ namespace Mini_Group_Project
             Console.WriteLine("will you try to cross or go back?");
             Console.WriteLine("1. cross");
             Console.WriteLine("2. go back");
+            Console.Write("> ");
             temp = Console.ReadLine();
             gap = Convert.ToInt32(temp);
 
@@ -534,7 +512,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Would you like to investigate the room?");
             Console.WriteLine("1: Yes");
             Console.WriteLine("2: No");
-            
+            Console.Write("> ");
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -546,6 +524,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("would you like to pick them up?");
                 Console.WriteLine("1: Yes");
                 Console.WriteLine("2: No");
+                Console.Write("> ");
 
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
@@ -585,6 +564,7 @@ namespace Mini_Group_Project
             Console.WriteLine("what will you do");
             Console.WriteLine("1. try to open the iron door");
             Console.WriteLine("2. try to open the magic door");
+            Console.Write("> ");
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -622,12 +602,6 @@ namespace Mini_Group_Project
 
 
 
-
-
-
-
-
-
         public static void Door3()
         {
             Console.Clear();
@@ -650,6 +624,7 @@ namespace Mini_Group_Project
             Console.ReadLine();
         }
 
+
         public static void Crossroads()
         {
             string temp;
@@ -662,6 +637,7 @@ namespace Mini_Group_Project
             Console.WriteLine("Door 1?");
             Console.WriteLine("Door 2?");
             Console.WriteLine("Door 3?");
+            Console.Write("> ");
             temp = Console.ReadLine();
             door = Convert.ToInt32(temp);
 
@@ -684,37 +660,55 @@ namespace Mini_Group_Project
 
 
 
-
         static void Main()
         {
             Random rand = new Random();
             string temp;
+            int userInput;
             int Starterdoor;
 
-            Console.Clear();
-
-            Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
-            Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
-            Console.WriteLine("Door 1?");
-            Console.WriteLine("Door 2?");
-            Console.WriteLine("Door 3?");
-            temp = Console.ReadLine();
-            Starterdoor = Convert.ToInt32(temp);
-
-            switch (Starterdoor)
+            Console.WriteLine("The Hunger Game".PadLeft(50));
+            Console.WriteLine("1. Start the game".PadLeft(25));
+            Console.WriteLine("2. Exit the game".PadLeft(24));
+            Console.Write("> ");
+            userInput = Convert.ToInt32(Console.ReadLine());
+            
+            switch (userInput)
             {
                 case 1:
-                    Door1();
+
+                    Console.Clear();
+
+                Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
+                Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
+                Console.WriteLine("Door 1?");
+                Console.WriteLine("Door 2?");
+                Console.WriteLine("Door 3?");
+                Console.Write("> ");
+                temp = Console.ReadLine();
+                Starterdoor = Convert.ToInt32(temp);
+
+                switch (Starterdoor)
+                {
+                    case 1:
+                        Door1();
+                        break;
+
+                    case 2:
+                        Door2();
+                        break;
+
+                    case 3:
+                        Door3();
+                        break;
+                }
                     break;
 
                 case 2:
-                    Door2();
+                    Console.Clear();
+                    Console.WriteLine("Goodbye!");
+                    Console.ReadLine();
                     break;
-
-                case 3:
-                    Door3();
-                    break;
-
             }
         }
     }
