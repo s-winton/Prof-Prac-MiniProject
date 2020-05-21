@@ -21,8 +21,7 @@ namespace Mini_Group_Project
         {
             Console.Clear();
             Console.WriteLine("Thank you for playing our game");
-            Console.ReadLine();
-            Environment.Exit(0);
+            Console.WriteLine();
         }
         
         
@@ -303,7 +302,7 @@ namespace Mini_Group_Project
                              {
                                  Console.WriteLine("The Ogre smashes it's club downwards!");
                                  Thread.Sleep(1000);
-                                 Console.WriteLine("The club makes a loud cracks it stikes your head!");
+                                 Console.WriteLine("The club makes a loud crack it stikes your head!");
                                  Thread.Sleep(5000);
                                  Console.WriteLine("... The World around you....  Vision... fading...");
                                  Thread.Sleep(7000);
@@ -418,7 +417,7 @@ namespace Mini_Group_Project
                             {
                                 Console.WriteLine("The Ogre smashes it's club downwards!");
                                 Thread.Sleep(1000);
-                                Console.WriteLine("The club makes a loud cracks it stikes your head!");
+                                Console.WriteLine("The club makes a loud crack it stikes your head!");
                                 Thread.Sleep(5000);
                                 Console.WriteLine("... The World around you....  Vision... fading...");
                                 Thread.Sleep(7000);
