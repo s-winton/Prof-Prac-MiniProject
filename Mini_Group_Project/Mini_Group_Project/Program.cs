@@ -17,7 +17,10 @@ namespace Mini_Group_Project
     }
     class Program
     {
+        public static void stair3()
+        {
 
+        }
         public static void magic()
         {
             Random rand = new Random();
@@ -343,21 +346,27 @@ namespace Mini_Group_Project
             int slip;
             Console.WriteLine("You flee back towards the spiral staircase you came down.");
             Console.WriteLine("You hear the Ogre lumbering behind you as try to flee up the stairs.");
+            Console.ReadLine();
 
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("You hastily clamber up the stairs. Trying your best to keep your grip on the mossy steps.");
+                Thread.Sleep(1000);
                 slip = rand.Next(1, 8);
                 if (slip == 1)
                 {
                     Console.WriteLine("You lose your grip on the slimy steps, falling to the ground and sliding back down the stairs.");
+                    Thread.Sleep(1000);
                     Console.WriteLine("The Ogre has caught you. It will surely shave your liver and squeeze the jelly from your eyes.");
                     Death();
+                    Console.ReadLine();
                 }
                 else
                 {
                     Console.WriteLine("You climb you way back up the stairs, escaping the Ogre.");
-                    Stair1();
+                    Console.ReadLine();
+                    Console.Clear();
+                    Stair3();
                 }
             }
         }
@@ -377,6 +386,7 @@ namespace Mini_Group_Project
             Console.WriteLine("1. Yes");
             Console.WriteLine("2. No");
             Console.Write("> ");
+            Console.ReadLine();
             temp = Console.ReadLine();
             yes = Convert.ToInt32(temp);
 
@@ -388,6 +398,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("1. Yes");
                 Console.WriteLine("2. No");
                 Console.Write("> ");
+                Console.ReadLine();
                 temp = Console.ReadLine();
                 staff = Convert.ToInt32(temp);
 
@@ -403,6 +414,7 @@ namespace Mini_Group_Project
                 {
                     Console.WriteLine("Best not to run around touching things that aren't yours.");
                     Console.WriteLine("you leave the room.");
+                    Console.ReadLine();
                     Door2();
                 }
             }
@@ -455,10 +467,6 @@ namespace Mini_Group_Project
                         fight();
                         break;
                 }
-            }
-            else
-            {
-                stair2();
             }
         }
 
@@ -526,6 +534,7 @@ namespace Mini_Group_Project
             else
             {
                 Console.WriteLine("You decide thats its not worth the hassle and look for another way...");
+                Console.ReadLine();
             }
 
         }
@@ -589,6 +598,7 @@ namespace Mini_Group_Project
             Console.WriteLine("1: Yes");
             Console.WriteLine("2: No");
             Console.Write("> ");
+            Console.ReadLine();
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -601,7 +611,7 @@ namespace Mini_Group_Project
                 Console.WriteLine("1: Yes");
                 Console.WriteLine("2: No");
                 Console.Write("> ");
-
+                Console.ReadLine();
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
                 
@@ -610,12 +620,16 @@ namespace Mini_Group_Project
                     Console.WriteLine("As you slip you hands into the soft, smooth wraps. Your body feels lighter.");
                     Globals.dexterity = Globals.dexterity + 3;
                     Console.WriteLine("Feeling as though you have found all of worth here, you leave the room.");
+                    Console.ReadLine();
+                    Console.Clear();
                     Crossroads();
                 }
                 
                 else
                 {
                     Console.WriteLine("You decide that everything would be rusted beyond purpose and leave.");
+                    Console.ReadLine();
+                    Console.Clear();
                     Crossroads();
                 }
             }
@@ -623,6 +637,8 @@ namespace Mini_Group_Project
             else
             {
                 Console.WriteLine("You decide that everything would be rusted beyond purpose and leave.");
+                Console.ReadLine();
+                Console.Clear();
                 Crossroads();
             }
         }
