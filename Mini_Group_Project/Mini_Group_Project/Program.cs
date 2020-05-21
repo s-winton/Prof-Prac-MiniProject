@@ -16,6 +16,17 @@ namespace Mini_Group_Project
     }
     class Program
     {
+        
+        public static void end()
+        {
+            Console.WriteLine("Thank you for playing our game");
+            Console.ReadLine();
+        }
+        
+        
+        
+        
+        
         public static void backstair()
         {
             Random rand = new Random();
@@ -154,8 +165,8 @@ namespace Mini_Group_Project
             Console.WriteLine("The big fat ogre laughs as you go to challenge him");
             do
             {
-                Console.WriteLine("You have " + Globals.hitpoints + " health");
-                Console.WriteLine("The ogre has " + Globals.ogrehealth + " Health");
+                Console.WriteLine("You have " + Globals.hitpoints + " health\n");
+                Console.WriteLine("The ogre has " + Globals.ogrehealth + " Health\n");
                 Console.WriteLine("what will you do?");
                 Console.WriteLine("1. stab him");
                 Console.WriteLine("2. use fireball");
@@ -179,37 +190,40 @@ namespace Mini_Group_Project
                         dodge();
                         break;
                 }
-
-            } while ((Globals.ogrehealth! >= 0) || (Globals.hitpoints! >= 0));
-
-            if (Globals.ogrehealth >= 0)
-            {
-                Console.WriteLine("The ogre falls with a great thud");
-                Console.WriteLine("You loot the orge and see that there is a club, and a wizards hat.");
-                Console.WriteLine("what will you take\n");
-                Console.WriteLine("1. The Club");
-                Console.WriteLine("2. The Wizards Hat");
-                Console.Write("> ");
-                temp = Console.ReadLine();
-                loot = Convert.ToInt32(temp);
-
-                if (loot == 1)
+                
+                if (Globals.hitpoints == 0)
                 {
-                    Console.WriteLine("You take the club, its a nice club");
-                    Console.ReadLine();
-                    Globals.strength = Globals.strength + 2;
+                    Death();                
                 }
-                else
-                {
-                    Console.WriteLine("You take the wizards hat, when you put it on you feel smarter");
-                    Console.ReadLine();
-                    Globals.intelligence = Globals.intelligence + 3;
-                }
+
+            } while (Globals.ogrehealth >= 0);
+            
+            
+             Console.WriteLine("The ogre falls with a great thud");
+             Console.WriteLine("You loot the orge and see that there is a club, and a wizards hat.");
+             Console.WriteLine("what will you take\n");
+             Console.WriteLine("1. The Club");
+             Console.WriteLine("2. The Wizards Hat");
+             Console.Write("> ");
+             temp = Console.ReadLine();
+             loot = Convert.ToInt32(temp);
+
+             if (loot == 1)
+             {
+               Console.WriteLine("You take the club, its a nice club");
+               Console.ReadLine();
+               Globals.strength = Globals.strength + 2;
+               end();
+             }
+             else
+             {
+               Console.WriteLine("You take the wizards hat, when you put it on you feel smarter");
+               Console.ReadLine();
+               Globals.intelligence = Globals.intelligence + 3;
+               end();
             }
-            else
-            {
-                Death();
-            }
+            
+          
         }
 
 
