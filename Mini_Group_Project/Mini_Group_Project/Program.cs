@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Runtime.Remoting.Channels;
 using System.Threading;
 
 
@@ -17,6 +16,10 @@ namespace Mini_Group_Project
     }
     class Program
     {
+        public static void backstair()
+        {
+
+        }
         public static void stair3()
         {
 
@@ -366,7 +369,7 @@ namespace Mini_Group_Project
                     Console.WriteLine("You climb you way back up the stairs, escaping the Ogre.");
                     Console.ReadLine();
                     Console.Clear();
-                    Stair3();
+                    stair3();
                 }
             }
         }
@@ -386,7 +389,6 @@ namespace Mini_Group_Project
             Console.WriteLine("1. Yes");
             Console.WriteLine("2. No");
             Console.Write("> ");
-            Console.ReadLine();
             temp = Console.ReadLine();
             yes = Convert.ToInt32(temp);
 
@@ -398,7 +400,6 @@ namespace Mini_Group_Project
                 Console.WriteLine("1. Yes");
                 Console.WriteLine("2. No");
                 Console.Write("> ");
-                Console.ReadLine();
                 temp = Console.ReadLine();
                 staff = Convert.ToInt32(temp);
 
@@ -408,7 +409,7 @@ namespace Mini_Group_Project
                     Globals.intelligence = Globals.intelligence + 3;
                     Console.WriteLine("You walk back to the first room you were in");
                     Console.ReadLine();
-                    Main();
+                    Start();
                 }
                 else
                 {
@@ -422,7 +423,7 @@ namespace Mini_Group_Project
             {
                 Console.WriteLine("Could be dangerous, best not to meddle.");
                 Console.WriteLine("You carry on with your adventure.");
-                Main();
+                Start();
             }
         }
         public static void encounter1()
@@ -467,6 +468,11 @@ namespace Mini_Group_Project
                         fight();
                         break;
                 }
+            }
+            else
+            {
+                Console.Clear();
+                backstair();
             }
         }
 
@@ -580,7 +586,7 @@ namespace Mini_Group_Project
             {
                 Console.WriteLine("You turn around finding yourself to afraid and go back into the first room");
                 Console.ReadLine();
-                Main();
+                Start();
             }
 
         }
@@ -598,7 +604,6 @@ namespace Mini_Group_Project
             Console.WriteLine("1: Yes");
             Console.WriteLine("2: No");
             Console.Write("> ");
-            Console.ReadLine();
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
 
@@ -611,7 +616,6 @@ namespace Mini_Group_Project
                 Console.WriteLine("1: Yes");
                 Console.WriteLine("2: No");
                 Console.Write("> ");
-                Console.ReadLine();
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
                 
@@ -703,7 +707,7 @@ namespace Mini_Group_Project
             Globals.strength = Globals.strength + 2;
             Globals.dexterity = Globals.dexterity - 2;
             Console.ReadLine();
-            Main();
+            Start();
         }
 
 
@@ -751,55 +755,58 @@ namespace Mini_Group_Project
         }
 
 
-
         static void Main()
         {
-            Random rand = new Random();
             string temp;
             int userInput;
-            int Starterdoor;
 
             Console.WriteLine("The Hunger Game".PadLeft(50));
             Console.WriteLine("1. Start the game".PadLeft(25));
             Console.WriteLine("2. Exit the game".PadLeft(24));
-            Console.Write("> ");
-            userInput = Convert.ToInt32(Console.ReadLine());
+            temp = Console.ReadLine();
+            userInput = Convert.ToInt32(temp);
             
             switch (userInput)
             {
                 case 1:
-
+                    Start();
+                    break;
+                default:
                     Console.Clear();
+                    Console.WriteLine("Good bye!");
+                    Console.ReadLine();
+                    break;
+            }
+        }
+        static void Start()
+        {
+            Random rand = new Random();
+            string temp;
+            int Starterdoor;
 
-                Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
-                Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
-                Console.WriteLine("Door 1?");
-                Console.WriteLine("Door 2?");
-                Console.WriteLine("Door 3?");
-                Console.Write("> ");
-                temp = Console.ReadLine();
-                Starterdoor = Convert.ToInt32(temp);
+            Console.Clear();
 
-                switch (Starterdoor)
-                {
-                    case 1:
-                        Door1();
-                        break;
+            Console.WriteLine("You wake up dazed and confused lying on a hard floor, you stand up and all you have on you is a broken dagger and some ragged clothing.");
+            Console.WriteLine("As you look around the room confused you notice three doors none of them have locks and should be able to just open, what door do you go through?: ");
+            Console.WriteLine("Door 1?");
+            Console.WriteLine("Door 2?");
+            Console.WriteLine("Door 3?");
+            Console.Write("> ");
+            temp = Console.ReadLine();
+            Starterdoor = Convert.ToInt32(temp);
 
-                    case 2:
-                        Door2();
-                        break;
-
-                    case 3:
-                        Door3();
-                        break;
-                }
+            switch (Starterdoor)
+            {
+                case 1:
+                    Door1();
                     break;
 
                 case 2:
-                    Console.Clear();
-                    Console.WriteLine("Goodbye!");
-                    Console.ReadLine();
+                    Door2();
+                    break;
+
+                case 3:
+                    Door3();
                     break;
             }
         }
