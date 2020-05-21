@@ -905,11 +905,16 @@ namespace Mini_Group_Project
         {
             string temp;
             int userInput;
-
-            Console.WriteLine("The Hunger Game".PadLeft(50));
+            Console.WriteLine("The Professional Practice Studio Present".PadLeft(60));
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("The Big Sad".PadLeft(50));
+            Thread.Sleep(1000);
+            Console.WriteLine();
             Console.WriteLine("1. Start the game".PadLeft(25));
             Console.WriteLine("2. Exit the game".PadLeft(24));
-            Console.Write("> ");
+            Console.WriteLine();
+            Console.Write("> ".PadLeft(10));
             temp = Console.ReadLine();
             userInput = Convert.ToInt32(temp);
             
