@@ -18,12 +18,30 @@ namespace Mini_Group_Project
     {
         public static void backstair()
         {
+            Random rand = new Random();
+            int slip;
+            Console.WriteLine("You walk up the spiral staircase you came down.");
+            Thread.Sleep(1000);
 
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("You climb up the stairs. Trying your best to keep your grip on the mossy steps.");
+                Thread.Sleep(1000);
+             
+                Console.WriteLine("You climb you way back up the stairs.");
+                Console.ReadLine();
+                Console.Clear();
+                stair3();
+                
+            }
         }
+
         public static void stair3()
         {
 
         }
+
+
         public static void magic()
         {
             Random rand = new Random();
