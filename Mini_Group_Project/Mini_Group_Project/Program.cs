@@ -103,13 +103,13 @@ namespace Mini_Group_Project
 
             if (Globals.dexterity >= 3)
             {
-                Console.WriteLine("you manage to dodge the ogres haymaker\n");
+                Console.WriteLine("You manage to dodge the ogres haymaker\n");
                 Console.ReadLine();
             }
             else
             {
                 damage = rand.Next(0, 2);
-                Console.WriteLine("you attempt to dodge but the ogre hits you! YOou take " + damage + " damage\n");
+                Console.WriteLine("You attempt to dodge but the ogre hits you! YOou take " + damage + " damage\n");
                 Globals.hitpoints = Globals.hitpoints - damage;
             }
         }
@@ -124,7 +124,7 @@ namespace Mini_Group_Project
             Random rand = new Random();
             int damage;
 
-            Console.WriteLine("you take a stab at the ogre");
+            Console.WriteLine("You take a stab at the ogre");
             Console.ReadLine();
 
             if (Globals.strength >= 5)
@@ -169,10 +169,10 @@ namespace Mini_Group_Project
                 Console.WriteLine("You have " + Globals.hitpoints + " health\n");
                 Console.WriteLine("The ogre has " + Globals.ogrehealth + " Health\n");
                 Console.WriteLine("what will you do?");
-                Console.WriteLine("1. stab him");
-                Console.WriteLine("2. use fireball");
-                Console.WriteLine("3. dodge");
-                Console.WriteLine("4. check health");
+                Console.WriteLine("1. Stab him");
+                Console.WriteLine("2. Use fireball");
+                Console.WriteLine("3. Dodge");
+                Console.WriteLine("4. Check health");
                 Console.Write("> ");
                 temp = Console.ReadLine();
                 choice = Convert.ToInt32(temp);
@@ -703,8 +703,8 @@ namespace Mini_Group_Project
             Console.WriteLine("You open the door with the big one on it, as you open the door you smell a foul stench.");
             Console.WriteLine("You walk into the room and notice a pit in the middle of the room and the stench is coming from the bottom. The only way across is the pillars that are spread out across the pit");
             Console.WriteLine("will you try to cross or go back?");
-            Console.WriteLine("1. cross");
-            Console.WriteLine("2. go back");
+            Console.WriteLine("1. Cross");
+            Console.WriteLine("2. Go back");
             Console.Write("> ");
             temp = Console.ReadLine();
             gap = Convert.ToInt32(temp);
@@ -803,8 +803,8 @@ namespace Mini_Group_Project
             Console.WriteLine("You open the door with the big two on it");
             Console.WriteLine("You enter the room only to see two doors one made of iron and one that seems to have some sort of magic protecting it");
             Console.WriteLine("what will you do");
-            Console.WriteLine("1. try to open the iron door");
-            Console.WriteLine("2. try to open the magic door");
+            Console.WriteLine("1. Try to open the iron door");
+            Console.WriteLine("2. Try to open the magic door");
             Console.Write("> ");
             temp = Console.ReadLine();
             choice = Convert.ToInt32(temp);
@@ -828,12 +828,12 @@ namespace Mini_Group_Project
             }
             else
             {
-                Console.WriteLine("you attempt to open the door using what little magic knowledge you have");
+                Console.WriteLine("You attempt to open the door using what little magic knowledge you have");
                 Console.ReadLine();
 
                 if (Globals.intelligence >= 3)
                 {
-                    Console.WriteLine("the door opens turns out idiots can use magic");
+                    Console.WriteLine("The door opens turns out idiots can use magic");
                     Console.ReadLine();
                     wall();
                 }
@@ -898,6 +898,7 @@ namespace Mini_Group_Project
 
             }
         }
+
 
 
         static void Main()
