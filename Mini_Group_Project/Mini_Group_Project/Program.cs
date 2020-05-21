@@ -19,8 +19,10 @@ namespace Mini_Group_Project
         
         public static void end()
         {
+            Console.Clear();
             Console.WriteLine("Thank you for playing our game");
             Console.ReadLine();
+            Environment.Exit(0);
         }
         
         
@@ -49,7 +51,7 @@ namespace Mini_Group_Project
 
         public static void stair3()
         {
-
+            end();
         }
 
 
@@ -240,18 +242,18 @@ namespace Mini_Group_Project
             Console.WriteLine("You start sprinting as fast as you can....");
             Thread.Sleep(1000);
 
-            if (Globals.dexterity > 2)
+            if (Globals.dexterity < 2)
             {
-                Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall! I think I can just get past... (dexerity " + Globals.dexterity + ")");
+                Console.WriteLine("As you approach the Ogre, you think to yourself " + "This was a really bad idea! The Ogre is so tall! Becasue of these heavy boots I don't think I can make it... (dexerity " + Globals.dexterity + ")");
                 Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall! Becasue of these heavy boots I don't think I can make it... (dexerity " + Globals.dexterity + ")");
+                Console.WriteLine("As you approach the Ogre, you think to yourself " + "This was a really bad idea! The Ogre is so tall! I think I can just get past... (dexerity " + Globals.dexterity + ")");
                 Console.ReadLine();
             }
             Console.Clear();
-            Console.WriteLine("As you approach the Ogre, you think to yourself ", "This was a really bad idea! The Ogre is so tall!");
+            Console.WriteLine("You run past the ogre, you think to yourself " + "This was a really bad idea! The Ogre is so tall!");
 
             if (Globals.dexterity > 2)
             {
@@ -268,7 +270,7 @@ namespace Mini_Group_Project
                     Console.WriteLine("The Ogre raises its club for another strike!");
                     Console.ReadLine();
                 }
-                else
+                if (dodge >60)
                 {
                     Console.WriteLine("\nYou leap in the air as the Ogre swings it's club at you...");
                     Thread.Sleep(1000);
@@ -279,7 +281,7 @@ namespace Mini_Group_Project
                     Console.WriteLine("Your spine cracks as you hit the wall!");
                     Console.WriteLine("AHHHHHHHHHHHHHHHHHHHHHHHHH!");
                     Thread.Sleep(3000);
-                    Console.WriteLine("You collapse to the flooor, unable to move or cry....");
+                    Console.WriteLine("You collapse to the floor, unable to move or cry....");
                     Thread.Sleep(3000);
                     Console.WriteLine("The Ogre approaches you, and whispers into your ear... ");
                     Thread.Sleep(1000);
@@ -297,7 +299,7 @@ namespace Mini_Group_Project
                     Console.WriteLine("You leap foward just in time, narrowly missing the attack!");
                     Console.ReadLine();
                 }
-                else
+                if (dodge >75)
                 {
                     Console.WriteLine("The Ogre smashes it's club downwards!");
                     Thread.Sleep(1000);
@@ -313,60 +315,60 @@ namespace Mini_Group_Project
                     Console.ReadLine();
                     Death();
 
-                    dodge = rand.Next(1, 101);
+                dodge = rand.Next(1, 101);
 
-                    if (dodge <=90)
-                    {
-                        Console.WriteLine("You sprint down the hallway as the ogre chases you...");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("The Orge shouts: " + "GET BACK HERE!");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("as you are running, you hear a loud click....");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("You've triggered a trap!");
-                        Console.ReadLine();
-                        Console.WriteLine("A log beam swings down from the ceiling...");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("You just manage to dodge! ");
-                        Thread.Sleep(3000);
-                        Console.WriteLine("The log beam hits the ogre right in the gut!");
-                        Thread.Sleep(2000);
-                        Console.WriteLine("The Cieling starts to collapse! Triggering the trap seemed to cause the hallway to collapse!");
-                        Thread.Sleep(2000);
-                        Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine("...As the dust settles you are relieved that no debries hit you... But the route behind you is now blocked off by a pile of rubble. No going back now...");
-                        Console.ReadLine();
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("You sprint down the hallway as the ogre chases you...");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("The Orge shouts: " + "GET BACK HERE!");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("as you are running, you hear a loud click....");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("You've triggered a trap!");
-                        Console.ReadLine();
-                        Console.WriteLine("A log beam swings down from the ceiling...");
-                        Thread.Sleep(3000);
-                        Console.WriteLine("...The log beam hits you straight in the chect!");
-                        Thread.Sleep(3000);
-                        Console.WriteLine("You are flung back onto your back! You gasp for air as the impact of the log has winded you!");
-                        Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine("The ogre peers over you, laughing.... Suddenly the cieling starts to collapse...");
-                        Thread.Sleep(3000);
-                        Console.WriteLine("It appears triggering that old trap caused the ceiling to collapse!");
-                        Thread.Sleep(3000);
-                        Console.WriteLine("You think to yourself " + "funny, I don't know whats worse, being eaten alive by an ogre or getting crushed to death...");
-                        Thread.Sleep(4000);
-                        Console.WriteLine("Well your about to find out, not long after that thought some rocky debries crush you as you are laying on your back...");
-                        Console.WriteLine("Ouch.");
-                        Console.ReadLine();
-                        Death();
-                    }
+                if (dodge <=90)
+                {
+                    Console.WriteLine("You sprint down the hallway as the ogre chases you...");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("The Orge shouts: " + "GET BACK HERE!");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("as you are running, you hear a loud click....");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("You've triggered a trap!");
+                    Console.ReadLine();
+                    Console.WriteLine("A log beam swings down from the ceiling...");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("You just manage to dodge! ");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("The log beam hits the ogre right in the gut!");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("The Cieling starts to collapse! Triggering the trap seemed to cause the hallway to collapse!");
+                    Thread.Sleep(2000);
+                    Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("...As the dust settles you are relieved that no debries hit you... But the route behind you is now blocked off by a pile of rubble. No going back now...");
+                    Console.ReadLine();
+                    end();
+                }
+                if (dodge >90)
+                {
+                    Console.WriteLine("You sprint down the hallway as the ogre chases you...");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("The Orge shouts: " + "GET BACK HERE!");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("as you are running, you hear a loud click....");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("You've triggered a trap!");
+                    Console.ReadLine();
+                    Console.WriteLine("A log beam swings down from the ceiling...");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("...The log beam hits you straight in the chect!");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("You are flung back onto your back! You gasp for air as the impact of the log has winded you!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("The ogre peers over you, laughing.... Suddenly the cieling starts to collapse...");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("It appears triggering that old trap caused the ceiling to collapse!");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("You think to yourself " + "funny, I don't know whats worse, being eaten alive by an ogre or getting crushed to death...");
+                    Thread.Sleep(4000);
+                    Console.WriteLine("Well your about to find out, not long after that thought some rocky debries crush you as you are laying on your back...");
+                    Console.WriteLine("Ouch.");
+                    Console.ReadLine();
+                    Death();
+                }
                 }
 
             }
@@ -530,44 +532,43 @@ namespace Mini_Group_Project
                 Console.WriteLine("You proceeed cautiously down the stairs....");
                 Thread.Sleep(500);
 
-                for (int i = 0; i < 5; i++)
+           
+                
+                Console.WriteLine("Slowly down the stairs you take a step...");
+                Thread.Sleep(2000);
+                slip = rand.Next(1, 5);
+                
+                if (slip == 1)
                 {
-                    Console.WriteLine("Slowly down the stairs you take a step...");
+                    Console.WriteLine("As you lift your left leg up to take another step, your right foot loses its footing!");
                     Thread.Sleep(2000);
-                    slip = rand.Next(1, 5);
-
-                    if (slip == 1)
-                    {
-                        i = i + 5;
-                        Console.WriteLine("As you lift your left leg up to take another step, your right foot loses its footing!");
-                        Thread.Sleep(2000);
-                        Console.WriteLine("You tumble down the stairs!");
-                        Thread.Sleep(500);
-                        Console.WriteLine("Ouch!");
-                        Thread.Sleep(800);
-                        Console.WriteLine("Ow!");
-                        Thread.Sleep(1000);
-                        Console.WriteLine("Agh!");
-                        Thread.Sleep(1000);
-                        Console.Clear();
-                        damage = rand.Next(2, 8);
-                        Globals.hitpoints = Globals.hitpoints - damage;
-
-                        Console.WriteLine("You are bruised and broken after that brutal fall.");
-                        Console.WriteLine("You took " + damage + " hitpoints of damage! You now have " + Globals.hitpoints + " hitpoints remaining!");
-                        Console.ReadLine();
-                        Console.Clear();
-                        encounter1();
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\nYou Safely decended the stairs");
-                        Console.ReadLine();
-                        Console.Clear();
-                        encounter1();
-                    }
+                    Console.WriteLine("You tumble down the stairs!");
+                    Thread.Sleep(500);
+                    Console.WriteLine("Ouch!");
+                    Thread.Sleep(800);
+                    Console.WriteLine("Ow!");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Agh!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                    damage = rand.Next(2, 8);
+                    Globals.hitpoints = Globals.hitpoints - damage;
+                
+                    Console.WriteLine("You are bruised and broken after that brutal fall.");
+                    Console.WriteLine("You took " + damage + " hitpoints of damage! You now have " + Globals.hitpoints + " hitpoints remaining!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    encounter1();
                 }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nYou Safely decend the stairs.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    encounter1();
+                }
+                
             }
             else
             {
