@@ -794,6 +794,7 @@ namespace Mini_Group_Project
             Console.WriteLine("The Hunger Game".PadLeft(50));
             Console.WriteLine("1. Start the game".PadLeft(25));
             Console.WriteLine("2. Exit the game".PadLeft(24));
+            Console.Write("> ");
             temp = Console.ReadLine();
             userInput = Convert.ToInt32(temp);
             
